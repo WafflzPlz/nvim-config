@@ -13,6 +13,13 @@ return {
                 handler = function()
                     require("neo-tree.command").execute({ action = "close" })
                 end
+            },
+            filesystem = {
+                filtered_items = {
+                  visible = true,
+                  hide_dotfiles = false,
+                  hide_gitignore = false
+                }
             }
         })
         vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>')
