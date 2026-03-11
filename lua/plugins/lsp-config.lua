@@ -13,8 +13,8 @@ return {
                     "lua_ls",
                     "clangd",
                     "jdtls",
-                    "ts_ls",
                     "pylsp",
+                    "rust_analyzer"
                 }
             })
         end
@@ -28,9 +28,6 @@ return {
             lspconfig.lua_ls.setup({
                 capabilities = capabilities
             })
-            lspconfig.ts_ls.setup({
-                capabilities = capabilities
-            })
             lspconfig.clangd.setup({
                 capabilities = capabilities
             })
@@ -38,6 +35,9 @@ return {
                 capabilities = capabilities
             })
             lspconfig.pylsp.setup({
+                capabilities = capabilities
+            })
+            lspconfig.rust_analyzer.setup({
                 capabilities = capabilities
             })
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
